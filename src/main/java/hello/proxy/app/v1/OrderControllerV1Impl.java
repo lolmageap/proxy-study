@@ -14,7 +14,7 @@ public class OrderControllerV1Impl implements OrderControllerV1 {
     private final OrderServiceV1 orderService;
 
     @Override
-    public String request(String itemId) {
+    public String request(@RequestParam String itemId) {
         orderService.orderItem(itemId);
         return "ok";
     }
